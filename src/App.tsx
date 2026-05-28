@@ -30,13 +30,13 @@ const redes = [
     etiqueta: "@Tioammioficial",
     emoji: "🛍️",
   },
-    {
-  nombre: "Síguenos",
-  descripcion: "Diseño para un estilo de vida móvil.",
-  url: "https://www.instagram.com/wiwuvzla/",
-  etiqueta: "@Wiwu",
-  emoji: "📱",
-},
+  {
+    nombre: "Síguenos",
+    descripcion: "Diseño para un estilo de vida móvil.",
+    url: "https://www.instagram.com/wiwuvzla/",
+    etiqueta: "@Wiwu",
+    emoji: "📱",
+  },
 ];
 
 export default function App() {
@@ -59,12 +59,10 @@ export default function App() {
           </p>
         </div>
 
-        
-
         <div className="links-list">
           {redes.map((red) => (
             <a
-              key={red.nombre}
+              key={red.url}
               className="social-card"
               href={red.url}
               target="_blank"
@@ -83,7 +81,22 @@ export default function App() {
           ))}
         </div>
 
-        
+        <a
+          className="ecommerce-card"
+          href="https://tioammi.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="ecommerce-icon">🛒</div>
+
+          <div className="ecommerce-info">
+            <h2>Compra Online</h2>
+            <span>Tienda online</span>
+            <p>Encuentra todos nuestros productos, en un solo lugar.</p>
+          </div>
+
+          <div className="arrow">›</div>
+        </a>
       </section>
     </main>
   );
